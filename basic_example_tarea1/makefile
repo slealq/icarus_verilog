@@ -4,13 +4,18 @@
 # @file
 # @version 0.1
 
-CC = iverilog
-
 all: verilog gtkwave 
 
-gtkwave: trace
-	vvp trace
-verilog: 
+gtkwave: trace.vcd
+	gtkwave trace.vcd
+trace:  
 	iverilog -o trace trace.v	
+verilog: trace
+	vvp trace
+yosys: verilog
+	yosys yosys.ys	
+
+clean: 
+	rm *.vcd trace synth.v
 
 # end
