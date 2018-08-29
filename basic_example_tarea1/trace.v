@@ -13,5 +13,6 @@ module trace ;
    initial begin
       $dumpfile("trace.vcd");
       $dumpvars(0, trace); // all vars
+      #10 $finish;
 
    end endmodule // trace
