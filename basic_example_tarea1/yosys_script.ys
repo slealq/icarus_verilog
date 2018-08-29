@@ -1,0 +1,13 @@
+# read design
+read_verilog up_counter.v
+
+# generic synthesis
+synth -top up_counter
+
+# mapping to cell lib
+dfflibmap -liberty /home/sleal/UCR/digitales_ii/icarus_verilog/vsclib013.lib
+abc -liberty /home/sleal/UCR/digitales_ii/icarus_verilog/vsclib013.lib
+clean
+
+# write synthesized design
+write_verilog synth.v
