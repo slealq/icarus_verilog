@@ -4,7 +4,7 @@
 # @file
 # @version 0.1
 
-all: verilog gtkwave 
+all: verilog gtkwave yosys
 
 gtkwave: trace.vcd
 	gtkwave trace.vcd
@@ -13,7 +13,7 @@ trace:
 verilog: trace
 	vvp trace
 yosys: verilog
-	yosys yosys.ys	
+	yosys yosys_script.ys	
 
 clean: 
 	rm *.vcd trace synth.v
