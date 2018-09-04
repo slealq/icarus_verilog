@@ -11,7 +11,7 @@ module mux (
 
    always @ (posedge clk)
      begin
-        selector <= ~clk;
+        selector <= ~selector;
      end
 
    endmodule
