@@ -10,7 +10,7 @@ mux : testbench
 	gtkwave mux.vcd
 
 testbench : verilog
-	vvp switch
+	vvp mux
 
 verilog : 
 	iverilog -o mux mux_tb.v
