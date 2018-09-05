@@ -3,7 +3,10 @@
 `include "mux_tester.v"
 
 module mux_tb;
-   wire reset_L, clk, [3:0] data_0, [3:0] data_1, [3:0] data_out;
+   wire reset_L, clk;
+   wire [3:0] data_0;
+   wire [3:0] data_1;
+   wire [3:0] data_out;
 
    mux mux_( .reset_L (reset_L),
              .clk (clk),
