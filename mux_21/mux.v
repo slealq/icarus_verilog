@@ -12,15 +12,22 @@ module mux (
    always @ (posedge clk)
      begin
         // initial values
+        data_out <= 'b0;
+        selector <= 'b0;
 
-        if (reset_L) begin
-           selector <= 1'b0;
+        if (!reset_L) begin
            data_out <= 4'b0;
         end // if
 
-        if (!reset_L) begin
-          selector <= ~selector;
-        end // if
+        if (reset_L) begin
+           if (selector) begin
+              data_out = data_0;
+              selector <= 'b0;
+           end else begin
+              data_out = data_1;
+              selector <= 'b1;
+           end
+        end // if not reset
 
      end
 
