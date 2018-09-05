@@ -7,11 +7,21 @@ module mux (
             output reg [3:0] data_out
             );
    // internal variable
-   reg                       selector = 1b'0;
+   reg                       selector;
 
    always @ (posedge clk)
      begin
-        selector <= ~selector;
+        // initial values
+
+        if (reset_L) begin
+           selector <= 1'b0;
+           data_out <= 4'b0;
+        end // if
+
+        if (!reset_L) begin
+          selector <= ~selector;
+        end // if
+
      end
 
    endmodule
