@@ -15,6 +15,7 @@ module mux (
 
         if (!reset_L) begin
            data_out <= 4'b0;
+           selector <= 'b0;
         end // if
 
         if (reset_L) begin
