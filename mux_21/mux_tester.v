@@ -26,20 +26,20 @@ module mux_tester (
       // iterate through all values
       repeat (16) begin
          @(posedge clk);
-         counter <= counter +1;
+         counter = counter +1;
 
          if (counter > 'b1) begin
-            data_0 <= data_0 + 1;
-            data_1 <= data_1 - 1;
-            counter <= 'b0;
+            data_0 = data_0 + 1;
+            data_1 = data_1 - 1;
+            counter = 'b0;
          end //if
 
       end
 
       // end with 0 in data values
       @(posedge clk);
-      data_0 <= 4'b0;
-      data_1 <= 4'b0;
+      data_0 = 4'b0;
+      data_1 = 4'b0;
 
       $finish;
 
