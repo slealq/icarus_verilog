@@ -19,12 +19,13 @@ module mux (
         end // if
 
         if (reset_L) begin
+           selector <= ~selector;
            if (selector) begin
-              data_out = data_0;
-              selector <= 'b0;
+              data_out <= data_0;
+              //selector <= 'b0;
            end else begin
-              data_out = data_1;
-              selector <= 'b1;
+              data_out <= data_1;
+              //selector <= 'b1;
            end
         end // if not reset
 
