@@ -20,7 +20,26 @@ module nand_delay (
 
    parameter PwrC = 0.00003;
 
-   nand #(1:3.3:5.1, 1:3.3:5.1) (temp, in1, in2);
+   and #(1:3.3:5.1, 1:3.3:5.1) (temp, in1, in2);
    not (out, temp);
 
 endmodule // and_delay
+
+module flip_flop_delay (
+                        output reg Q,
+                        input D,
+                        input clk
+                        );
+
+endmodule // flip_flop_delay
+
+module mux_21_delay (
+                     output Q,
+                     input A,
+                     input B,
+                     input S,
+                     input Reset_L
+                     );
+
+   assign
+
