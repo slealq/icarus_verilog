@@ -3,6 +3,7 @@ module gate_tester (
                output reg in1_nand,
                output reg in2_nand,
                input      out_not,
+               input      out_nand,
                output reg clk
                     );
 
@@ -17,6 +18,7 @@ module gate_tester (
       in1_nand <= 1'b0;
       in2_nand <= 1'b1;
 
+      // pruebas para el not
       repeat (4) begin
          // pruebas del not
          @(posedge clk);
@@ -25,10 +27,11 @@ module gate_tester (
          // pruebas del nand
          in1_nand <= ~in1_nand;
          in2_nand <= ~in2_nand;
-
       end
 
-      $finish;
+      #10 in1_nand <= ~in1_nand;
+
+      #20 $finish;
    end // initial begi
 
    initial clk <= 0;
