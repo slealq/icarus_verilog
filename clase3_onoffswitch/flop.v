@@ -1,7 +1,7 @@
 module flop (
              output reg Q,
              input      D,
-             input      sClk,
+             input      sClk
              );
 
    always @ (posedge sClk)
