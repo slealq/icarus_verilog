@@ -3,20 +3,22 @@
 
 module testbench;
 
-   wire in, out_not, out_nand;
+   wire in_not, in1_nand, in2_nand, out_not, out_nand;
 
-   not_delay not_ ( .in (in),
-                    .out_not (out)
+   not_delay not_ ( .in (in_not),
+                    .out (out_not)
                     );
 
-   gate_tester tester_ (.in (in),
+   gate_tester tester_ (.in_not (in_not),
+                        .in1_nand (in1_nand),
+                        .in2_nand (in2_nand),
                         .out_nand (out_nand),
                         .out_not (out_not)
                         );
 
-   nand_delay nand_ (.in1 (in1),
-                   .in2 (in2),
-                   .out_nand (out)
+   nand_delay nand_ (.in1 (in1_nand),
+                   .in2 (in2_nand),
+                   .out (out_nand)
                    );
 
 endmodule
