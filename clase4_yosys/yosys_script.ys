@@ -1,0 +1,27 @@
+# read the verilog file
+read_verilog switch.v
+hierarchy -check -top switch
+
+# sintesis mapeo a formato interno y optimizaciones
+proc; opt; techmap; opt; memory; opt
+
+# mappint to internal cell library
+techmap; opt
+
+# show preload of my cells
+# show
+
+# mapping flip flops to my cells
+dfflibmap -liberty mycells.lib
+
+# mapping logic to my cells.lib
+abc -liberty mycells.lib
+
+# cleanup
+clean
+
+# write synthezised design
+write_verilog synth.v
+
+# show diagram
+# show
