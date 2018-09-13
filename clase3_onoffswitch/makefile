@@ -10,11 +10,13 @@ switch : testbench
 	gtkwave switch.vcd
 
 testbench : verilog
-	vvp switch
+	vvp switch.out
 
 verilog : 
-	iverilog -o switch testbench.v
+	iverilog -o switch.out testbench.v
 
+clean: 
+	rm *.out *.vcd
 
 
 # end
