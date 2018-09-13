@@ -10,10 +10,12 @@ mux : testbench
 	gtkwave mux.vcd
 
 testbench : verilog
-	vvp mux
+	vvp mux.out
 
 verilog : 
-	iverilog -o mux mux_tb.v
+	iverilog -o mux.out mux_tb.v
 
+clean: 
+	rm *.vcd *.out
 
 # end
