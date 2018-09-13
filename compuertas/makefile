@@ -15,6 +15,8 @@ testbench : verilog
 verilog : 
 	iverilog -o testing testbench.v
 
+clean:
+	rm testing *.vcd
 
 
 # end
