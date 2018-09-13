@@ -38,8 +38,8 @@ module flip_flop_delay (
 
    always @ (posedge clk)
      begin
-        Q <= D;
         posedge_time = $realtime;
+        #(1.4:3:4.6) Q <= D; // solo estoy asignando el tiempo typ
         if (posedge_time - dchange_time < setup )
           begin
              $display("Error de setup a los %t", posedge_time);
@@ -65,9 +65,6 @@ module mux_21_delay (
                      input Reset_L
                      );
 
-   always @ (*)
-     begin
 
-     end
 
 endmodule
