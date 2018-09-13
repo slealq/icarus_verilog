@@ -10,13 +10,13 @@ switch : testbench
 	gtkwave gate_tester_result.vcd
 
 testbench : verilog
-	vvp testing
+	vvp testing.out
 
 verilog : 
-	iverilog -o testing testbench.v
+	iverilog -o testing.out -T typ testbench.v
 
 clean:
-	rm testing *.vcd
+	rm *.out *.vcd
 
 
 # end
