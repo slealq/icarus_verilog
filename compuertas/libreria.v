@@ -31,18 +31,18 @@ module flip_flop_delay (
                         input clk
                         );
 
-   parameter setup = 10; // hay que cambiarlos
-   parameter hold  = 9;
+   parameter setup = 1.5; // hay que cambiarlos
+   parameter hold  = 0.5;
 
    realtime             posedge_time, dchange_time;
 
-   always @ (posedge sClk)
+   always @ (posedge clk)
      begin
         Q <= D;
         posedge_time = $realtime;
         if (posedge_time - dchange_time < setup )
           begin
-             $display("Error de setup");
+             $display("Error de setup a los %t", posedge_time);
           end
      end
 
@@ -51,7 +51,7 @@ module flip_flop_delay (
         dchange_time = $realtime;
         if (dchange_time - posedge_time < hold)
           begin
-             $display("Error de hold");
+             $display("Error de hold a los %t", dchange_time);
           end
      end
 
@@ -64,5 +64,10 @@ module mux_21_delay (
                      input S,
                      input Reset_L
                      );
+
+   always @ (*)
+     begin
+
+     end
 
 endmodule
