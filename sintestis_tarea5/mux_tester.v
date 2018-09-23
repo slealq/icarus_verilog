@@ -4,8 +4,9 @@ module mux_tester (
                    output reg reset_L,
                    output reg [3:0] data_0,
                    output reg [3:0] data_1,
-                   input [3:0] data_out_estructural,
-                   input [3:0] data_out_conductual
+                   input [3:0] data_out_estructural_ideal,
+                   input [3:0] data_out_conductual,
+                   input [3:0] data_out_estructural_real
                    );
 
    reg [2:0]                   counter;
