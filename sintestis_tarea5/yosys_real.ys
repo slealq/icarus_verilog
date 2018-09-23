@@ -24,4 +24,4 @@ clean
 write_verilog mux_estructural_real.v
 
 # show diagram
-show
+show -lib mycells.v
