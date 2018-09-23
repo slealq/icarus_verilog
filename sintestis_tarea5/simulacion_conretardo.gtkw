@@ -1,0 +1,30 @@
+[*]
+[*] GTKWave Analyzer v3.3.94 (w)1999-2018 BSI
+[*] Sun Sep 23 03:54:17 2018
+[*]
+[dumpfile] "/home/sleal/UCR/digitales_ii/icarus_verilog/sintestis_tarea5/mux.vcd"
+[dumpfile_mtime] "Sun Sep 23 03:40:10 2018"
+[dumpfile_size] 9089
+[savefile] "/home/sleal/UCR/digitales_ii/icarus_verilog/sintestis_tarea5/simulacion_conretardo.gtkw"
+[timestart] 0
+[size] 1366 721
+[pos] -1 -1
+*-15.344892 63600 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] mux_tb.
+[sst_width] 200
+[signals_width] 304
+[sst_expanded] 1
+[sst_vpaned_height] 196
+@28
+mux_tb.mux_tester_.clk
+mux_tb.mux_tester_.counter[2:0]
+@22
+mux_tb.mux_tester_.data_0[3:0]
+mux_tb.mux_tester_.data_1[3:0]
+mux_tb.mux_tester_.data_out_conductual[3:0]
+mux_tb.mux_tester_.data_out_estructural_ideal[3:0]
+mux_tb.mux_tester_.data_out_estructural_real[3:0]
+@28
+mux_tb.mux_tester_.reset_L
+[pattern_trace] 1
+[pattern_trace] 0
