@@ -21,10 +21,11 @@ yosys_ideal:
 	yosys yosys_ideal.ys
 	sed -i 's/mux(/mux_estructural_ideal(/g' mux_estructural_ideal.v
 
-yosys_retardo: 
-	yosys yosys_retardo.ys
+yosys_real: 
+	yosys yosys_real.ys
+	sed -i 's/mux(/mux_estructural_real(/g' mux_estructural_real.v
 
 clean: 
-	rm *.vcd *.out mux_estructural_ideal.v
+	rm *.vcd *.out mux_estructural_ideal.v mux_estructural_real.v
 
 # end
