@@ -15,7 +15,7 @@ testbench : verilog
 	vvp mux.out
 
 verilog : 
-	iverilog -o mux.out mux_tb.v
+	iverilog -T typ -o mux.out mux_tb.v
 
 yosys_ideal: 
 	yosys yosys_ideal.ys
