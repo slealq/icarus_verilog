@@ -49,6 +49,6 @@ module mux_tester (
 
    initial clk <= 0;
 
-   always #2 clk <= ~clk;
+   always #20 clk <= ~clk;
 
 endmodule
