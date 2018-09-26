@@ -6,8 +6,10 @@ module mux_tester (
                    output reg [3:0] data_1,
                    output reg       valid_0,
                    output reg       valid_1,
-                   input [3:0]      data_out,
-                   input            valid_out
+                   input [3:0]      data_out_est,
+                   input [3:0]      data_out_cond,
+                   input            valid_out_cond,
+                   input            valid_out_est
                    );
 
    reg [2:0]                   counter;
