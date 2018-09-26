@@ -1,6 +1,7 @@
 // This will be a 4:1 bit of 4 bits
+`include "mux.v"
 
-module mux41 (
+module mux_41 (
               input clk,
               input reset_L,
               input [3:0] data_0,
