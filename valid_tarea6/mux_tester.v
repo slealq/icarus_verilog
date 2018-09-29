@@ -38,7 +38,7 @@ module mux_tester (
       repeat (16) begin
          @(posedge clk);
 
-         #1;
+         #10;
          counter <= counter + 1;
          contador_ <= contador_ + 1;
 
@@ -67,6 +67,6 @@ module mux_tester (
 
    initial clk <= 0;
 
-   always #2 clk <= ~clk;
+   always #40 clk <= ~clk;
 
 endmodule
