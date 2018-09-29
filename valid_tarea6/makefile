@@ -31,6 +31,8 @@ yosys:
 yosys_41:
 	yosys yosys_41.ys
 	sed -i 's/mux_41(/mux_41_estructural(/g' mux_41_estructural.v
+	sed -i 's/mux(/mux_estructural(/g' mux_41_estructural.v
+	sed -i 's/mux /mux_estructural /g' mux_41_estructural.v
 
 clean: 
 	rm *.vcd *.out
