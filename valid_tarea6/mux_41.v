@@ -12,8 +12,8 @@ module mux_41 (
               input valid_1,
               input valid_2,
               input valid_3,
-              output reg [3:0] data_out,
-              output reg valid_out
+              output [3:0] data_out,
+              output valid_out
               );
 
    wire [3:0]            from_muxA_to_muxC;
