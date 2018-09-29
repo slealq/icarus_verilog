@@ -37,6 +37,8 @@ module mux_tester (
       // iterate through all values
       repeat (16) begin
          @(posedge clk);
+
+         #1;
          counter <= counter + 1;
          contador_ <= contador_ + 1;
 
