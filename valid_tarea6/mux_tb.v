@@ -2,6 +2,7 @@
 `include "mux.v"
 `include "mux_tester.v"
 `include "mux_estructural.v"
+`include "mycells.v"
 
 module mux_tb;
    wire reset_L, clk;
