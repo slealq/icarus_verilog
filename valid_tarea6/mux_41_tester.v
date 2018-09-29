@@ -13,7 +13,7 @@ module mux_41_tester (
                    input [3:0]      data_out_cond,
                    input [3:0]      data_out_est,
                    input            valid_out_cond,
-                   input            valid_out_est,
+                   input            valid_out_est
                    );
 
    reg [2:0]                   counter;
@@ -31,7 +31,7 @@ module mux_41_tester (
       valid_0 <= 'b1;
       valid_1 <= 'b1;
       valid_2 <= 'b1;
-      valid_3 <= 'b2;
+      valid_3 <= 'b1;
 
       // start counter with 0
       counter <= 'b0;
@@ -43,6 +43,9 @@ module mux_41_tester (
       // iterate through all values
       repeat (16) begin
          @(posedge clk);
+
+         #1;
+
          counter <= counter + 1;
 
          if (counter > 'b1) begin
@@ -70,9 +73,9 @@ module mux_41_tester (
 
    always #2 clk <= ~clk;
 
-   always #3 valid_0 <= ~valid_0;
-   always #4 valid_1 <= ~valid_1;
-   always #5 valid_2 <= ~valid_2;
-   always #6 valid_3 <= ~valid_3;
+   always #5 valid_0 <= ~valid_0;
+   always #7 valid_1 <= ~valid_1;
+   always #9 valid_2 <= ~valid_2;
+   always #11 valid_3 <= ~valid_3;
 
 endmodule
