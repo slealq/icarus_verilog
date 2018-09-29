@@ -12,10 +12,10 @@ techmap; opt
 # show
 
 # mapping flip flops to my cells
-#dfflibmap -liberty mycells.lib
+dfflibmap -liberty mycells.lib
 
 # mapping logic to my cells.lib
-#abc -liberty mycells.lib
+abc -liberty mycells.lib
 
 # cleanup
 clean
@@ -24,5 +24,5 @@ clean
 write_verilog mux_estructural.v
 
 # show diagram
-# show -lib mycells.v
-show
+show -lib mycells.v
+#show
