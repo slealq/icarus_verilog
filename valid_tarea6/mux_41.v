@@ -23,6 +23,7 @@ module mux_41 (
 
    mux muxA(clk, reset_L, data_0, data_1, valid_0, valid_1, valid_0_muxC, from_muxA_to_muxC);
    mux muxB(clk, reset_L, data_2, data_3, valid_2, valid_3, valid_1_muxC, from_muxB_to_muxC);
-   mux muxC(clk, reset_L, from_muxA_to_muxC, from_muxB_to_muxC, valid_0_muxC, valid_1_muxC, valid_out, data_out);
+   mux muxC(clk, reset_L, from_muxA_to_muxC, from_muxB_to_muxC,
+            valid_0_muxC, valid_1_muxC, valid_out, data_out);
 
 endmodule
