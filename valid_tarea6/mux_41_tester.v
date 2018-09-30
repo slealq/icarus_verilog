@@ -44,7 +44,7 @@ module mux_41_tester (
       repeat (16) begin
          @(posedge clk);
 
-         #1;
+         #10;
 
          counter <= counter + 1;
 
@@ -71,11 +71,11 @@ module mux_41_tester (
 
    initial clk <= 0;
 
-   always #2 clk <= ~clk;
+   always #40 clk <= ~clk;
 
-   always #5 valid_0 <= ~valid_0;
-   always #7 valid_1 <= ~valid_1;
-   always #9 valid_2 <= ~valid_2;
-   always #11 valid_3 <= ~valid_3;
+   always #121 valid_0 <= ~valid_0;
+   always #121 valid_1 <= ~valid_1;
+   always #121 valid_2 <= ~valid_2;
+   always #121 valid_3 <= ~valid_3;
 
 endmodule
