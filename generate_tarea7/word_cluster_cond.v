@@ -3,9 +3,10 @@ module word_cluster_cond #(
                               parameter WORD_SIZE = 4,
                               parameter WORD_NUM = BUS_SIZE / WORD_SIZE
                               ) (
-                                 input                     clk,
-                                 input                     reset,
-                                 input [BUS_SIZE-1:0]      data_in,
+                                 input                 clk,
+                                 input                 reset,
+                                 input [BUS_SIZE-1:0]  data_in,
+                                 output [BUS_SIZE-1:0] data_out,
                                  output [WORD_NUM-1:0] word_bus
                                  );
 
@@ -22,8 +23,10 @@ module word_cluster_cond #(
                            ) cluster_unit ( .clk (clk),
                                             .reset (reset),
                                             .word_in (data_in [WORD_SIZE*(i+1) - 1 : WORD_SIZE*(i)] ),
-                                            .word_control_out (word_bus [i])
+                                            .word_control_out (word_bus [i]),
+                                            .word_out (data_out [BUS_SIZE-WORD_SIZE*(i)-1:BUS_SIZE-WORD_SIZE*(i+1)])
                                            );
+
       end // block: CLUSTER
    endgenerate
 endmodule // bitwise_cluster_cond

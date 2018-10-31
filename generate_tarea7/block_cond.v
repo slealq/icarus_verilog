@@ -8,7 +8,7 @@ module block_cond #(
                      input reset,
                      input [BUS_SIZE-1:0] data_in,
                      output reg error,
-                     output reg [BUS_SIZE-1:0] data_out,
+                     output [BUS_SIZE-1:0] data_out,
                      output [WORD_NUM-1:0] word_bus
                      );
 
@@ -17,10 +17,11 @@ module block_cond #(
    // estructural
 
    word_cluster_cond wc_cond (
-                                 .clk (clk),
-                                 .reset (reset),
-                                 .data_in (data_in),
-                                 .word_bus (word_bus)
-                                 );
+                              .clk (clk),
+                              .reset (reset),
+                              .data_in (data_in),
+                              .data_out (data_out),
+                              .word_bus (word_bus)
+                              );
 
 endmodule
