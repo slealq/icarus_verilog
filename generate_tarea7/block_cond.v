@@ -16,7 +16,11 @@ module block_cond #(
 
    // estructural
 
-   bitwise_cluster_cond
-
+   word_cluster_cond wc_cond (
+                                 .clk (clk),
+                                 .reset (reset),
+                                 .data_in (data_in),
+                                 .word_bus (word_bus)
+                                 );
 
 endmodule

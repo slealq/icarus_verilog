@@ -1,0 +1,77 @@
+[*]
+[*] GTKWave Analyzer v3.3.94 (w)1999-2018 BSI
+[*] Wed Oct 31 20:57:12 2018
+[*]
+[dumpfile] "/home/sleal/UCR/digitales_ii/icarus_verilog/generate_tarea7/block.vcd"
+[dumpfile_mtime] "Wed Oct 31 20:55:43 2018"
+[dumpfile_size] 6784
+[savefile] "/home/sleal/UCR/digitales_ii/icarus_verilog/generate_tarea7/block.gtkw"
+[timestart] 0
+[size] 1366 721
+[pos] -1 -1
+*-18.000000 201100 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] block_tb.
+[sst_width] 200
+[signals_width] 287
+[sst_expanded] 1
+[sst_vpaned_height] 196
+@28
+block_tb.clk
+block_tb.reset
+@200
+-Bus de entrada de datos
+@c00023
+block_tb.bus_in[31:0]
+@28
+(0)block_tb.bus_in[31:0]
+(1)block_tb.bus_in[31:0]
+(2)block_tb.bus_in[31:0]
+(3)block_tb.bus_in[31:0]
+(4)block_tb.bus_in[31:0]
+(5)block_tb.bus_in[31:0]
+(6)block_tb.bus_in[31:0]
+(7)block_tb.bus_in[31:0]
+(8)block_tb.bus_in[31:0]
+(9)block_tb.bus_in[31:0]
+(10)block_tb.bus_in[31:0]
+(11)block_tb.bus_in[31:0]
+(12)block_tb.bus_in[31:0]
+(13)block_tb.bus_in[31:0]
+(14)block_tb.bus_in[31:0]
+(15)block_tb.bus_in[31:0]
+(16)block_tb.bus_in[31:0]
+(17)block_tb.bus_in[31:0]
+(18)block_tb.bus_in[31:0]
+(19)block_tb.bus_in[31:0]
+(20)block_tb.bus_in[31:0]
+(21)block_tb.bus_in[31:0]
+(22)block_tb.bus_in[31:0]
+(23)block_tb.bus_in[31:0]
+(24)block_tb.bus_in[31:0]
+(25)block_tb.bus_in[31:0]
+(26)block_tb.bus_in[31:0]
+(27)block_tb.bus_in[31:0]
+(28)block_tb.bus_in[31:0]
+(29)block_tb.bus_in[31:0]
+(30)block_tb.bus_in[31:0]
+(31)block_tb.bus_in[31:0]
+@1401203
+-group_end
+@200
+-Salida Conductual
+@22
+block_tb.bus_out_cond[31:0]
+@28
+block_tb.error_cond
+@22
+block_tb.word_bus_cond[7:0]
+@200
+-Salida Estructural
+@22
+block_tb.bus_out_est[31:0]
+@28
+block_tb.error_est
+@22
+block_tb.word_bus_est[7:0]
+[pattern_trace] 1
+[pattern_trace] 0

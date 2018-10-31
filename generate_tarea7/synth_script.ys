@@ -1,0 +1,11 @@
+read_verilog block_cond.v
+read_verilog word_cluster_cond.v
+read_verilog word_operation_cond.v
+hierarchy -check -top block_cond
+proc; opt; techmap; opt; memory; opt
+techmap; opt
+dfflibmap -liberty lib/cmos_cells.lib;
+abc -liberty lib/cmos_cells.lib;
+clean
+write_verilog block_est.v
+show -lib lib/cmos_cells.v block_cond

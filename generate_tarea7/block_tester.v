@@ -21,26 +21,31 @@ module block_tester #(
       reset <= 'b0;
       bus_in <= 'b1;
 
+      #50 reset <= 'b1;
+
       repeat (31) begin
          @(posedge clk);
 
-         bus_in << bus_in;
+         bus_in <= bus_in << 1;
 
       end
+
+      $finish;
 
    end // initial begin
 
    always @ (posedge clk) begin
-      if (!reset) begin
-         if (bus_out_est != bus_out_cond) begin
+      if (reset) begin
+         $display("Iniciando con las verificaciones en %t", $realtime);
+         if (bus_out_est !== bus_out_cond) begin
             $display("Diferencia en el bus out");
          end
 
-         if (word_bus_est != word_bus_cond) begin
+         if (word_bus_est !== word_bus_cond) begin
             $display("Diferencia en el bus de word");
          end
 
-         if (error_est != error_cond) begin
+         if (error_est !== error_cond) begin
             $display("Diferencia en el bit de error");
          end
       end // if (!reset)
