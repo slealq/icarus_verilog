@@ -1,0 +1,35 @@
+[*]
+[*] GTKWave Analyzer v3.3.94 (w)1999-2018 BSI
+[*] Sun Sep 30 21:16:07 2018
+[*]
+[dumpfile] "/home/sleal/UCR/digitales_ii/icarus_verilog/valid_tarea6/mux_41.vcd"
+[dumpfile_mtime] "Sun Sep 30 21:13:49 2018"
+[dumpfile_size] 10400
+[savefile] "/home/sleal/UCR/digitales_ii/icarus_verilog/valid_tarea6/prueba_41_cond_vs_est.gtkw"
+[timestart] 0
+[size] 1366 721
+[pos] 1487 628
+*-18.232716 309000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 200
+[signals_width] 210
+[sst_expanded] 1
+[sst_vpaned_height] 196
+@28
+mux_tb.clk
+@22
+mux_tb.data_0[3:0]
+mux_tb.data_1[3:0]
+mux_tb.data_2[3:0]
+mux_tb.data_3[3:0]
+mux_tb.data_out_cond[3:0]
+mux_tb.data_out_est[3:0]
+@28
+mux_tb.reset_L
+mux_tb.valid_0
+mux_tb.valid_1
+mux_tb.valid_2
+mux_tb.valid_3
+mux_tb.valid_out_cond
+mux_tb.valid_out_est
+[pattern_trace] 1
+[pattern_trace] 0
