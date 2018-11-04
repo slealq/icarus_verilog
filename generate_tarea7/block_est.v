@@ -119,8 +119,65 @@ endmodule
 (* top =  1  *)
 (* src = "block_est.v:1" *)
 module block_est(clk, reset, data_in, error, data_out, word_bus);
+  (* src = "block_est.v:28" *)
+  wire [3:0] _000_;
+  (* src = "block_est.v:28" *)
+  wire _001_;
+  (* src = "block_est.v:28" *)
+  wire [1:0] _002_;
+  wire _003_;
+  wire _004_;
+  wire _005_;
+  wire _006_;
+  wire _007_;
+  wire _008_;
+  wire _009_;
+  wire _010_;
+  wire _011_;
+  wire _012_;
+  wire _013_;
+  wire _014_;
+  wire _015_;
+  wire _016_;
+  wire _017_;
+  wire _018_;
+  wire _019_;
+  wire _020_;
+  wire _021_;
+  wire _022_;
+  wire _023_;
+  wire _024_;
+  wire _025_;
+  wire _026_;
+  wire _027_;
+  wire _028_;
+  wire _029_;
+  wire _030_;
+  wire _031_;
+  wire _032_;
+  wire _033_;
+  wire _034_;
+  wire _035_;
+  wire _036_;
+  wire _037_;
+  wire _038_;
+  wire _039_;
+  wire _040_;
+  wire _041_;
+  wire _042_;
+  wire _043_;
+  wire _044_;
+  wire _045_;
+  wire _046_;
+  wire _047_;
+  wire _048_;
+  wire _049_;
+  wire _050_;
+  wire _051_;
   (* src = "block_est.v:7" *)
   input clk;
+  (* src = "block_est.v:16" *)
+  wire [3:0] current_pos;
   (* src = "block_est.v:9" *)
   input [31:0] data_in;
   (* src = "block_est.v:11" *)
@@ -129,9 +186,324 @@ module block_est(clk, reset, data_in, error, data_out, word_bus);
   output error;
   (* src = "block_est.v:8" *)
   input reset;
+  (* src = "block_est.v:15" *)
+  wire [1:0] state;
   (* src = "block_est.v:12" *)
   output [7:0] word_bus;
-  (* src = "block_est.v:19" *)
+  NOT _052_ (
+    .A(state[1]),
+    .Y(_003_)
+  );
+  NOT _053_ (
+    .A(current_pos[0]),
+    .Y(_004_)
+  );
+  NOT _054_ (
+    .A(current_pos[1]),
+    .Y(_005_)
+  );
+  NOT _055_ (
+    .A(current_pos[2]),
+    .Y(_006_)
+  );
+  NOT _056_ (
+    .A(reset),
+    .Y(_007_)
+  );
+  NOT _057_ (
+    .A(data_in[0]),
+    .Y(_008_)
+  );
+  NOT _058_ (
+    .A(data_in[2]),
+    .Y(_009_)
+  );
+  NOR _059_ (
+    .A(current_pos[0]),
+    .B(_008_),
+    .Y(_010_)
+  );
+  NOR _060_ (
+    .A(_005_),
+    .B(data_in[1]),
+    .Y(_011_)
+  );
+  NOR _061_ (
+    .A(_010_),
+    .B(_011_),
+    .Y(_012_)
+  );
+  NAND _062_ (
+    .A(current_pos[0]),
+    .B(_008_),
+    .Y(_013_)
+  );
+  NAND _063_ (
+    .A(_005_),
+    .B(data_in[1]),
+    .Y(_014_)
+  );
+  NAND _064_ (
+    .A(_013_),
+    .B(_014_),
+    .Y(_015_)
+  );
+  NAND _065_ (
+    .A(data_in[28]),
+    .B(data_in[29]),
+    .Y(_016_)
+  );
+  NAND _066_ (
+    .A(data_in[30]),
+    .B(data_in[31]),
+    .Y(_017_)
+  );
+  NOR _067_ (
+    .A(_016_),
+    .B(_017_),
+    .Y(_018_)
+  );
+  NOR _068_ (
+    .A(current_pos[2]),
+    .B(_009_),
+    .Y(_019_)
+  );
+  NOR _069_ (
+    .A(_006_),
+    .B(data_in[2]),
+    .Y(_020_)
+  );
+  NOR _070_ (
+    .A(_019_),
+    .B(_020_),
+    .Y(_021_)
+  );
+  NAND _071_ (
+    .A(current_pos[3]),
+    .B(data_in[3]),
+    .Y(_022_)
+  );
+  NOT _072_ (
+    .A(_022_),
+    .Y(_023_)
+  );
+  NOR _073_ (
+    .A(current_pos[3]),
+    .B(data_in[3]),
+    .Y(_024_)
+  );
+  NOR _074_ (
+    .A(_023_),
+    .B(_024_),
+    .Y(_025_)
+  );
+  NAND _075_ (
+    .A(_018_),
+    .B(_021_),
+    .Y(_026_)
+  );
+  NOR _076_ (
+    .A(_015_),
+    .B(_025_),
+    .Y(_027_)
+  );
+  NAND _077_ (
+    .A(_012_),
+    .B(_027_),
+    .Y(_028_)
+  );
+  NOR _078_ (
+    .A(_026_),
+    .B(_028_),
+    .Y(_029_)
+  );
+  NOR _079_ (
+    .A(state[1]),
+    .B(_029_),
+    .Y(_030_)
+  );
+  NOR _080_ (
+    .A(_003_),
+    .B(current_pos[0]),
+    .Y(_031_)
+  );
+  NOR _081_ (
+    .A(state[1]),
+    .B(_004_),
+    .Y(_032_)
+  );
+  NOT _082_ (
+    .A(_032_),
+    .Y(_033_)
+  );
+  NOR _083_ (
+    .A(_031_),
+    .B(_032_),
+    .Y(_034_)
+  );
+  NAND _084_ (
+    .A(reset),
+    .B(_034_),
+    .Y(_035_)
+  );
+  NOR _085_ (
+    .A(_030_),
+    .B(_035_),
+    .Y(_000_[0])
+  );
+  NOR _086_ (
+    .A(_005_),
+    .B(_033_),
+    .Y(_036_)
+  );
+  NAND _087_ (
+    .A(current_pos[1]),
+    .B(_032_),
+    .Y(_037_)
+  );
+  NOR _088_ (
+    .A(current_pos[1]),
+    .B(_032_),
+    .Y(_038_)
+  );
+  NOR _089_ (
+    .A(_007_),
+    .B(_038_),
+    .Y(_039_)
+  );
+  NAND _090_ (
+    .A(_037_),
+    .B(_039_),
+    .Y(_040_)
+  );
+  NOR _091_ (
+    .A(_030_),
+    .B(_040_),
+    .Y(_000_[1])
+  );
+  NOR _092_ (
+    .A(_006_),
+    .B(_037_),
+    .Y(_041_)
+  );
+  NOR _093_ (
+    .A(current_pos[2]),
+    .B(_036_),
+    .Y(_042_)
+  );
+  NOR _094_ (
+    .A(_041_),
+    .B(_042_),
+    .Y(_043_)
+  );
+  NAND _095_ (
+    .A(reset),
+    .B(_043_),
+    .Y(_044_)
+  );
+  NOR _096_ (
+    .A(_030_),
+    .B(_044_),
+    .Y(_000_[2])
+  );
+  NAND _097_ (
+    .A(current_pos[3]),
+    .B(_041_),
+    .Y(_045_)
+  );
+  NOR _098_ (
+    .A(current_pos[3]),
+    .B(_041_),
+    .Y(_046_)
+  );
+  NOR _099_ (
+    .A(_007_),
+    .B(_046_),
+    .Y(_047_)
+  );
+  NAND _100_ (
+    .A(_045_),
+    .B(_047_),
+    .Y(_048_)
+  );
+  NOR _101_ (
+    .A(_030_),
+    .B(_048_),
+    .Y(_000_[3])
+  );
+  NAND _102_ (
+    .A(reset),
+    .B(_030_),
+    .Y(_049_)
+  );
+  NOR _103_ (
+    .A(_003_),
+    .B(_007_),
+    .Y(_002_[1])
+  );
+  NAND _104_ (
+    .A(state[0]),
+    .B(_002_[1]),
+    .Y(_050_)
+  );
+  NAND _105_ (
+    .A(_049_),
+    .B(_050_),
+    .Y(_002_[0])
+  );
+  NAND _106_ (
+    .A(error),
+    .B(_002_[1]),
+    .Y(_051_)
+  );
+  NAND _107_ (
+    .A(_049_),
+    .B(_051_),
+    .Y(_001_)
+  );
+  (* src = "block_est.v:28" *)
+  DFF _108_ (
+    .C(clk),
+    .D(_001_),
+    .Q(error)
+  );
+  (* src = "block_est.v:28" *)
+  DFF _109_ (
+    .C(clk),
+    .D(_002_[0]),
+    .Q(state[0])
+  );
+  (* src = "block_est.v:28" *)
+  DFF _110_ (
+    .C(clk),
+    .D(_002_[1]),
+    .Q(state[1])
+  );
+  (* src = "block_est.v:28" *)
+  DFF _111_ (
+    .C(clk),
+    .D(_000_[0]),
+    .Q(current_pos[0])
+  );
+  (* src = "block_est.v:28" *)
+  DFF _112_ (
+    .C(clk),
+    .D(_000_[1]),
+    .Q(current_pos[1])
+  );
+  (* src = "block_est.v:28" *)
+  DFF _113_ (
+    .C(clk),
+    .D(_000_[2]),
+    .Q(current_pos[2])
+  );
+  (* src = "block_est.v:28" *)
+  DFF _114_ (
+    .C(clk),
+    .D(_000_[3]),
+    .Q(current_pos[3])
+  );
+  (* src = "block_est.v:20" *)
   word_cluster_est wc_cond (
     .clk(clk),
     .data_in(data_in),

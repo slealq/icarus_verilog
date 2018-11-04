@@ -30,6 +30,41 @@ module block_tester #(
 
       end
 
+      // test for error signal
+
+      repeat (2) begin
+         @(posedge clk);
+         bus_in <= 'hFAAABBB0;
+
+         @(posedge clk);
+         bus_in <= 'hFAAABBB1;
+
+         @(posedge clk);
+         bus_in <= 'hFAAABBB2;
+
+         @(posedge clk);
+         bus_in <= 'hAAAABBB3;
+
+         @(posedge clk);
+         bus_in <= 'hFAAABBB0;
+
+         @(posedge clk);
+         bus_in <= 'hFAAABBB9;
+
+         @(posedge clk);
+         bus_in <= 'hFAAABBB2;
+
+         @(posedge clk);
+         bus_in <= 'hFAAABBB3;
+
+         @(posedge clk);
+         bus_in <= 'hFAAABBB2;
+
+         @(posedge clk);
+         bus_in <= 'hFAAABBB3;
+
+      end // repeat (2)
+
       $finish;
 
    end // initial begin
