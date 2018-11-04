@@ -1,0 +1,51 @@
+[*]
+[*] GTKWave Analyzer v3.3.94 (w)1999-2018 BSI
+[*] Sun Nov  4 17:50:02 2018
+[*]
+[dumpfile] "/home/sleal/UCR/digitales_ii/icarus_verilog/gray_tarea8/contador.vcd"
+[dumpfile_mtime] "Sun Nov  4 17:45:04 2018"
+[dumpfile_size] 91857
+[savefile] "/home/sleal/UCR/digitales_ii/icarus_verilog/gray_tarea8/gray.gtkw"
+[timestart] 1814400
+[size] 1366 721
+[pos] 553 568
+*-17.011065 6037400 2160000 -1 9839700 6000400 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] contador_gray_tb.
+[sst_width] 200
+[signals_width] 203
+[sst_expanded] 1
+[sst_vpaned_height] 398
+@200
+-Datos de Entrada
+@28
+[color] 1
+contador_gray_tb.tester_.clk
+[color] 7
+contador_gray_tb.tester_.enable
+contador_gray_tb.tester_.reset_L
+@200
+-Salida Conductual
+@800022
+contador_gray_tb.cg_cond.data_out[4:0]
+@28
+(0)contador_gray_tb.cg_cond.data_out[4:0]
+(1)contador_gray_tb.cg_cond.data_out[4:0]
+(2)contador_gray_tb.cg_cond.data_out[4:0]
+(3)contador_gray_tb.cg_cond.data_out[4:0]
+(4)contador_gray_tb.cg_cond.data_out[4:0]
+@1001200
+-group_end
+@200
+-Salida Estructural
+@800022
+contador_gray_tb.cg_est.salida_gray[4:0]
+@28
+(0)contador_gray_tb.cg_est.salida_gray[4:0]
+(1)contador_gray_tb.cg_est.salida_gray[4:0]
+(2)contador_gray_tb.cg_est.salida_gray[4:0]
+(3)contador_gray_tb.cg_est.salida_gray[4:0]
+(4)contador_gray_tb.cg_est.salida_gray[4:0]
+@1001200
+-group_end
+[pattern_trace] 1
+[pattern_trace] 0
