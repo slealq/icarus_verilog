@@ -30,6 +30,13 @@ module tester (
 
    end
 
+   always @ (posedge clk) begin
+      if (sum30_dd_est != sum30_dd_cond) begin
+         $display("Diferencia en la salida en %t", $realtime);
+      end
+   end
+
+
    initial clk <= 1;
 
    always #10 clk <= ~clk;
