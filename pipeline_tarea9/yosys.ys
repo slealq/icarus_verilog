@@ -1,0 +1,10 @@
+read_verilog sumador_cond.v
+read_verilog sum_pipe_cond.v
+hierarchy -check -top sumador_cond
+proc; opt; techmap; opt; memory; opt
+techmap; opt
+dfflibmap -liberty mycells.lib
+abc -liberty mycells.lib
+clean
+write_verilog sumador_est.v
+show -lib mycells.v sumador_cond

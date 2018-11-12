@@ -1,0 +1,117 @@
+[*]
+[*] GTKWave Analyzer v3.3.94 (w)1999-2018 BSI
+[*] Mon Nov 12 01:08:05 2018
+[*]
+[dumpfile] "/home/sleal/UCR/digitales_ii/icarus_verilog/pipeline_tarea9/sum.vcd"
+[dumpfile_mtime] "Mon Nov 12 01:06:48 2018"
+[dumpfile_size] 18481
+[savefile] "/home/sleal/UCR/digitales_ii/icarus_verilog/pipeline_tarea9/sum.gtkw"
+[timestart] 0
+[size] 1366 721
+[pos] -1 -1
+*-15.038107 139900 19900 40000 59900 80100 100100 119800 139900 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] testbench.
+[treeopen] testbench.sc.
+[treeopen] testbench.se.
+[sst_width] 200
+[signals_width] 156
+[sst_expanded] 1
+[sst_vpaned_height] 196
+@200
+-Entradas
+@28
+[color] 1
+testbench.sc.clk
+@22
+[color] 2
+testbench.sc.idx[3:0]
+@28
+[color] 5
+testbench.sc.reset_L
+@23
+[color] 3
+testbench.sc.dataA[3:0]
+[color] 3
+testbench.sc.dataB[3:0]
+@200
+-Conductual
+@22
+testbench.sc.idx[3:0]
+testbench.sc.idx_d[3:0]
+testbench.sc.idx_dd[3:0]
+@28
+[color] 5
+testbench.sc.spc.acarreo
+@c00022
+[color] 3
+testbench.sc.spc.dataA[3:0]
+@28
+[color] 4
+(0)testbench.sc.spc.dataA[3:0]
+[color] 4
+(1)testbench.sc.spc.dataA[3:0]
+[color] 4
+(2)testbench.sc.spc.dataA[3:0]
+[color] 4
+(3)testbench.sc.spc.dataA[3:0]
+@1401200
+-group_end
+@c00022
+[color] 3
+testbench.sc.spc.dataB[3:0]
+@28
+[color] 4
+(0)testbench.sc.spc.dataB[3:0]
+[color] 4
+(1)testbench.sc.spc.dataB[3:0]
+[color] 4
+(2)testbench.sc.spc.dataB[3:0]
+[color] 4
+(3)testbench.sc.spc.dataB[3:0]
+@1401200
+-group_end
+@22
+[color] 1
+testbench.sc.sum30_dd[3:0]
+@200
+-Estructural
+@22
+testbench.se.idx[3:0]
+testbench.se.idx_d[3:0]
+testbench.se.idx_dd[3:0]
+@28
+[color] 5
+testbench.se.spc.acarreo
+@c00022
+[color] 3
+testbench.se.spc.dataA[3:0]
+@28
+[color] 3
+(0)testbench.se.spc.dataA[3:0]
+[color] 3
+(1)testbench.se.spc.dataA[3:0]
+[color] 3
+(2)testbench.se.spc.dataA[3:0]
+[color] 3
+(3)testbench.se.spc.dataA[3:0]
+@1401200
+-group_end
+@c00022
+[color] 3
+testbench.se.spc.dataB[3:0]
+@28
+[color] 3
+(0)testbench.se.spc.dataB[3:0]
+[color] 3
+(1)testbench.se.spc.dataB[3:0]
+[color] 3
+(2)testbench.se.spc.dataB[3:0]
+[color] 3
+(3)testbench.se.spc.dataB[3:0]
+@1401200
+-group_end
+@22
+[color] 1
+testbench.se.sum30_dd[3:0]
+[pattern_trace] 1
+[pattern_trace] 0
