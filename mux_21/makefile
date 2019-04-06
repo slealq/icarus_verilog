@@ -1,21 +1,17 @@
 ##
-# Tarea 2 Digitales II
-#
 # @file
 # @version 0.1
 
-all : mux
+all: mux
 
-mux : testbench
+mux: testbench
 	gtkwave mux.vcd
 
-testbench : verilog
+testbench: verilog
 	vvp mux.out
 
-verilog : 
+verilog:
 	iverilog -o mux.out mux_tb.v
 
-clean: 
+clean:
 	rm *.vcd *.out
-
-# end
